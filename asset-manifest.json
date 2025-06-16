@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/zarnitsa/static/js/main.764fffff.js",
+    "main.js": "/zarnitsa/static/js/main.9df361e0.js",
     "static/media/icons8-globe.gif": "/zarnitsa/static/media/icons8-globe.bd578b97b44d4a6b3ec6.gif",
     "index.html": "/zarnitsa/index.html",
-    "main.764fffff.js.map": "/zarnitsa/static/js/main.764fffff.js.map"
+    "main.9df361e0.js.map": "/zarnitsa/static/js/main.9df361e0.js.map"
   },
   "entrypoints": [
-    "static/js/main.764fffff.js"
+    "static/js/main.9df361e0.js"
   ]
 }
