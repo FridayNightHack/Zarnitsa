@@ -1,29 +1,29 @@
 [
   {
     "id": 1,
-    "image": "zarnitsa/assets/images/small/paraglider.png",
-    "background": "zarnitsa/assets/images/small/paraglider.png",
+    "image": "./assets/images/small/paraglider.png",
+    "background": "./assets/images/small/paraglider.png",
     "title": "параплан над морем",
     "subtitle": "..."
   },
   {
     "id": 2,
-    "image": "zarnitsa/assets/images/small/storm.jpg",
-    "background": "zarnitsa/assets/images/small/storm.jpg",
+    "image": "./assets/images/small/storm.jpg",
+    "background": "./assets/images/small/storm.jpg",
     "title": "яхта в шторме",
     "subtitle": ".."
   },
   {
     "id": 3,
-    "image": "zarnitsa/assets/images/small/fire.png",
-    "background": "zarnitsa/assets/images/small/fire.png",
+    "image": "./assets/images/small/fire.png",
+    "background": "./assets/images/small/fire.png",
     "title": "команда у костра в горах",
     "subtitle": "..."
   },
   {
     "id": 4,
-    "image": "zarnitsa/assets/images/small/wind_kite.png",
-    "background": "zarnitsa/assets/images/small/wind_kite.png",
+    "image": "./assets/images/small/wind_kite.png",
+    "background": "./assets/images/small/wind_kite.png",
     "title": "кайт и виндсёрфинг",
     "subtitle": "..."
   }
