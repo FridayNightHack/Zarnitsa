@@ -1,17 +1,10 @@
 import React from 'react';
-import {
-  Container,
-  Wrapper,
-  Title,
-  Subtitle,
-  Text,
-  Box,
-  Button,
-} from './styles/hero';
+import { Container, Wrapper, Title, Subtitle, Text, Box, Button, Action } from './styles/hero';
 
 function Hero({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
+
 Hero.Title = function HeroTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
@@ -30,6 +23,14 @@ Hero.Box = function HeroBox({ children, ...restProps }) {
 
 Hero.Button = function HeroButton({ children, ...restProps }) {
   return <Button {...restProps}>{children}</Button>;
+};
+
+Hero.Action = function HeroAction({ children, ...restProps }) {
+  return (
+    <Action {...restProps} href="#camp-types">
+      {children}
+    </Action>
+  );
 };
 
 export default Hero;

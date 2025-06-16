@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro';
 
-
 export const Container = styled.div`
   color: white;
   flex-shrink: 0;
@@ -12,8 +11,16 @@ export const Container = styled.div`
   @media (max-width: 64em) {
     padding: 0;
     width: initial;
+    margin-top: 90px;
   }
+`;
 
+export const SecondaryContainer = styled(Container)`
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -29,7 +36,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 4rem;
+  font-size: clamp(30px, 2vw, 40px);
   font-weight: 400;
   position: absolute;
   top: 25px;
@@ -39,18 +46,11 @@ export const Title = styled.h2`
     position: static;
     text-align: center;
   }
-  @media (max-width: 100em) {
-    font-size: calc(3vw + 0.8em);
-  }
 `;
 
 export const Subtitle = styled.h3`
-  font-size: 2rem;
+  font-size: clamp(17px, 1.5vw, 30px);
   text-transform: uppercase;
-
-  @media (max-width: 100em) {
-    font-size: calc(0.75vw + 1em);
-  }
 `;
 
 export const Text = styled.p`
@@ -79,5 +79,25 @@ export const Button = styled.button`
   transition: background 200ms;
   &:hover {
     background: ${(props) => props.hoverBg};
+  }
+`;
+
+export const Action = styled.a`
+  text-decoration: none;
+  background-color: #ffd700;
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #ffc300;
+    box-shadow: 0 0 18px rgba(255, 215, 0, 0.8);
   }
 `;

@@ -28,7 +28,7 @@ Header.MenuItem = function HeaderMenuItem({ ...restProps }) {
   return <MenuItem {...restProps}></MenuItem>;
 };
 
-Header.Link = function HeaderMenuLink({children, ...restProps }) {
+Header.Link = function HeaderMenuLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
 
@@ -45,7 +45,7 @@ Header.LogoWrapper = function HeaderLogoWrapper({ ...restProps }) {
 };
 
 Header.Logo = function HeaderLogo({ ...restProps }) {
-  return <Logo {...restProps}></Logo>;
+  return <Logo {...restProps} href="/"></Logo>;
 };
 
 Header.Button = function HeaderButton({ ...restProps }) {

@@ -1,12 +1,19 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin:0;
     padding: 0;
 } 
-html, 
+
+:root {
+    --container-medium: 1500px;
+    --container-padding: 16px;
+}
+
+html,
 body {
         color: #333;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -15,6 +22,7 @@ body {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         overflow-x: hidden;
+        sc
          @media (max-width:30em) {
         overflow-x: auto;
     }

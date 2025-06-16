@@ -2,7 +2,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { MapWrapper, StyledMap, StyledPopup } from '../components/map-routes/styles/mapRoutes';
+import { MapWrapper, StyledMap, StyledPopup } from './styles/mapRoutes';
 
 // Настройка иконки Leaflet
 delete L.Icon.Default.prototype._getIconUrl;

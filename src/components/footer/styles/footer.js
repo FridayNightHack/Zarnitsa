@@ -1,11 +1,10 @@
 import styled from 'styled-components/macro';
 
 export const Container = styled.footer`
-  color: white;
-  line-height: 1.4em;
-  padding: 0.3em 0.5em;
-  position: relative;
-  z-index: 1;
+  background: #0d0d1a;
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
   @media (max-width: 64em) {
     text-align: center;
   }
@@ -31,8 +30,8 @@ export const Link = styled.a`
 `;
 
 export const Text = styled.p`
-  display:inline-block;
-   @media (max-width: 64em) {
+  display: inline-block;
+  @media (max-width: 64em) {
     text-align: center;
   }
 `;

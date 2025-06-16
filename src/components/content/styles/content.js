@@ -29,3 +29,15 @@ export const Wrapper = styled.div`
     }
   }
 `;
+
+export const ContentWithContainer = styled.div`
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+`;
+
+export const ContainerMedium = styled.div`
+  max-width: calc(var(--container-medium) - var(--container-padding) * 2);
+  margin-inline: auto;
+  position: relative;
+`;

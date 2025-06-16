@@ -1,6 +1,7 @@
 import { Header, MobileNavMenu } from '../components';
 import 'styled-components/macro';
 import useMatchMedia from '../hooks/useMatchMedia';
+import { Link } from 'react-router-dom';
 
 export function HeaderContainer(props) {
   const { showMobileNav, setShowMobileNav, children } = props;
@@ -14,7 +15,7 @@ export function HeaderContainer(props) {
         <Header.Nav>
           <Header.Menu>
             <Header.MenuItem>
-              <Header.Link href="">Карта маршрутов</Header.Link>
+              <Header.Link href="/routemap">Карта маршрутов</Header.Link>
             </Header.MenuItem>
             <Header.MenuItem>
               <Header.Link href="/camping">Кемпинг & Глемпинг</Header.Link>

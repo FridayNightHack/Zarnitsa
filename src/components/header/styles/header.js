@@ -27,9 +27,16 @@ export const LogoWrapper = styled.div`
   align-items: center;
   display: flex;
 `;
-export const Logo = styled.h1`
+export const Logo = styled.a`
   font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
   user-select: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.56);
+  }
   @media (max-width: 64em) {
     display: none;
   }

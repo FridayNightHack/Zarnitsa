@@ -1,0 +1,9 @@
+{
+  "id": "1",
+  "name": "Якорная стоянка №1",
+  "coords": [44.569, 33.495],
+  "media": ["image1.jpg", "video1.mp4"],
+  "description": "Удобная стоянка с песчаным дном.",
+  "bookingLink": "https://example.com/book/1",
+  "gpx": "/tracks/sailing1.gpx"
+}
