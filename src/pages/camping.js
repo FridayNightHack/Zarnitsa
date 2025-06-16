@@ -47,12 +47,12 @@ export default function Camping() {
     setShowLoading(false);
   }, []);
 
-  useEffect(() => {
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, [handleLoad]);
+  // useEffect(() => {
+  //   window.addEventListener('load', handleLoad);
+  //   return () => window.removeEventListener('load', handleLoad);
+  // }, [handleLoad]);
 
-  if (showLoading) return <LoadingContainer />;
+  // if (showLoading) return <LoadingContainer />;
   return (
     <>
       <MobileNavMenuContainer showMobileNav={showMobileNav} />

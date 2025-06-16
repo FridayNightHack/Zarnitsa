@@ -15,19 +15,39 @@ export function HeaderContainer(props) {
         <Header.Nav>
           <Header.Menu>
             <Header.MenuItem>
-              <Header.Link href="/routemap">Карта маршрутов</Header.Link>
+              <Header.Link>
+                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  Карта маршрутов
+                </Link>
+              </Header.Link>
             </Header.MenuItem>
             <Header.MenuItem>
-              <Header.Link href="/camping">Кемпинг & Глемпинг</Header.Link>
+              <Header.Link>
+                <Link to="/camping" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  Кемпинг & Глемпинг
+                </Link>
+              </Header.Link>
             </Header.MenuItem>
             <Header.MenuItem>
-              <Header.Link>Парусный туризм</Header.Link>
+              <Header.Link>
+                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  Парусный туризм
+                </Link>
+              </Header.Link>
             </Header.MenuItem>
             <Header.MenuItem>
-              <Header.Link>Ориентирование</Header.Link>
+              <Header.Link>
+                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  Ориентирование
+                </Link>
+              </Header.Link>
             </Header.MenuItem>
             <Header.MenuItem>
-              <Header.Link>Школа выживания</Header.Link>
+              <Header.Link>
+                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  Школа выживания
+                </Link>
+              </Header.Link>
             </Header.MenuItem>
           </Header.Menu>
         </Header.Nav>

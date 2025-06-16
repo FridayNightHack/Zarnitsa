@@ -22,17 +22,17 @@ export default function Home() {
     setShowLoading(false);
   }, []);
 
-  useEffect(() => {
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, [handleLoad]);
+  // useEffect(() => {
+  //   window.addEventListener('load', handleLoad);
+  //   return () => window.removeEventListener('load', handleLoad);
+  // }, [handleLoad]);
 
   const handleProgressAnimation = () => {
     setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
     setTranslateXValue((translateXValue) => translateXValue - 270);
   };
 
-  if (showLoading) return <LoadingContainer />;
+  // if (showLoading) return <LoadingContainer />;
   return (
     <>
       <CardSlider.LinearProgress

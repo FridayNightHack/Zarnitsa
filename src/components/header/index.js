@@ -11,6 +11,7 @@ import {
   Button,
   Wrapper,
 } from './styles/header';
+import { href } from 'react-router-dom';
 
 function Header({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -32,7 +33,7 @@ Header.Link = function HeaderMenuLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
 
-Header.Wrapper = function HeaderWrapper({ children, ...restProps }) {
+Header.Wrapper = function HeaderWrapper({ children, link, ...restProps }) {
   return <Wrapper {...restProps}>{children}</Wrapper>;
 };
 

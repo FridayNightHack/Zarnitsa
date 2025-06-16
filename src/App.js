@@ -23,11 +23,10 @@ function App() {
             />
           ))}
         </Helmet>
-        <HashRouter>
+        <HashRouter basename="/">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/camping" element={<Camping />} />
-            {/* другие маршруты */}
           </Routes>
         </HashRouter>
       </HelmetProvider>
