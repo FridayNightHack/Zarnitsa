@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/images/small/paraglider.png",
+    "background": "/assets/images/small/paraglider.png",
+    "title": "параплан над морем",
+    "subtitle": "..."
+  },
+  {
+    "id": 2,
+    "image": "/assets/images/small/storm.jpg",
+    "background": "/assets/images/small/storm.jpg",
+    "title": "яхта в шторме",
+    "subtitle": ".."
+  },
+  {
+    "id": 3,
+    "image": "/assets/images/small/fire.png",
+    "background": "/assets/images/small/fire.png",
+    "title": "команда у костра в горах",
+    "subtitle": "..."
+  },
+  {
+    "id": 4,
+    "image": "/assets/images/small/wind_kite.png",
+    "background": "/assets/images/small/wind_kite.png",
+    "title": "кайт и виндсёрфинг",
+    "subtitle": "..."
+  }
+]
