@@ -5,7 +5,7 @@ import {
   Nav,
   Menu,
   MenuItem,
-  Link,
+  Links,
   Container,
   Box,
   Button,
@@ -29,8 +29,8 @@ Header.MenuItem = function HeaderMenuItem({ ...restProps }) {
   return <MenuItem {...restProps}></MenuItem>;
 };
 
-Header.Link = function HeaderMenuLink({ children, ...restProps }) {
-  return <Link {...restProps}>{children}</Link>;
+Header.Links = function HeaderMenuLink({ children, ...restProps }) {
+  return <Links {...restProps}>{children}</Links>;
 };
 
 Header.Wrapper = function HeaderWrapper({ children, link, ...restProps }) {

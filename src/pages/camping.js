@@ -23,19 +23,19 @@ const accommodations = [
     title: 'Большой купол «Солнце»',
     emoji: '🌌',
     description: 'Прозрачный купол с видом на звёздное небо и телескопом внутри.',
-    image: './assets/images/large/cmpng/types/night-sky.png',
+    image: 'zarnitsa/assets/images/large/cmpng/types/night-sky.png',
   },
   {
     title: 'Юрта «Луна»',
     emoji: '🏕',
     description: 'Место для сна, отдыха и чилл-зона, баня в можжевеловом лесу.',
-    image: './assets/images/large/cmpng/types/bathhouse.jpg',
+    image: 'zarnitsa/assets/images/large/cmpng/types/bathhouse.jpg',
   },
   {
     title: 'Лесной домик',
     emoji: '🌲',
     description: 'Уютный деревянный домик среди сосен, тишина и свежий воздух.',
-    image: './assets/images/large/cmpng/types/camp.jpg',
+    image: 'zarnitsa/assets/images/large/cmpng/types/camp.jpg',
   },
 ];
 
@@ -58,8 +58,8 @@ export default function Camping() {
       <MobileNavMenuContainer showMobileNav={showMobileNav} />
 
       <Background.Centered
-        bg="./assets/images/large/cmpng/domes-2.jpg"
-        bgSmall="./assets/images/large/cmpng/domes-2.jpg"
+        bg="zarnitsa/assets/images/large/cmpng/domes-2.jpg"
+        bgSmall="zarnitsa/assets/images/large/cmpng/domes-2.jpg"
         style={{ backgroundAttachment: 'fixed' }}>
         <HeaderContainer showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} />
         <Content style={{ padding: '0px 0px' }}>

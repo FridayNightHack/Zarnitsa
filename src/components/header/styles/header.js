@@ -86,7 +86,7 @@ export const MenuItem = styled.li`
   }
 `;
 
-export const Link = styled.a`
+export const Links = styled.a`
   color: white;
   text-decoration: none;
 `;
