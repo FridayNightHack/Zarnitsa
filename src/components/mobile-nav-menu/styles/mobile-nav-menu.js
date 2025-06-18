@@ -1,20 +1,20 @@
 import styled from 'styled-components/macro';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.nav`
-  align-items: center;
-  background: whitesmoke;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+  background: rgba(33, 33, 34, 0.95);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 40px 20px 20px 20px;
   display: none;
   flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
-  left: 0;
-  position: fixed;
-  transform: ${({ isActive }) => (isActive ? 'translateY(0)' : 'translateY(-100%)')};
-  transition: transform 0.4s;
-  top: 0;
-  width: 100vw;
-  z-index: 100;
-
+  z-index: 2;
+  transform: translateX(${({ isActive }) => (isActive ? '0' : '100%')});
+  transition: transform 0.3s ease;
   @media (max-width: 48rem) {
     display: flex;
   }
@@ -22,13 +22,25 @@ export const Container = styled.nav`
 
 export const Wrapper = styled.div``;
 
-export const Link = styled.a`
-  color: black;
-  display: inline-block;
-  transition: color 100ms;
-
+export const StyledLink = styled(Link)`
+  border-color: black;
+  border-style: solid;
+  display: block;
+  border-width: 0 0 1px 0;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  transition: background-color 200ms;
   &:hover {
-    color: #000000a6;
+    color: #f4b41a; /* Акцентный жёлтый */
+    background: rgb(163 159 159 / 20%);
+  }
+
+  @media (max-width: 40em) {
+    padding: 0.5em;
   }
 `;
 
@@ -37,11 +49,14 @@ export const Text = styled.p`
   text-align: center;
 `;
 export const AttributionLink = styled.a`
-  color: blue;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
   text-decoration: none;
+  transition: color 0.2s ease;
 
   &:hover {
-    text-decoration: underline;
+    color: #f4b41a; /* Акцентный жёлтый */
   }
 `;
 
@@ -51,35 +66,21 @@ export const List = styled.ul`
   width: 100%;
 `;
 export const Item = styled.li`
-  border-color: black;
-  border-style: solid;
-  border-width: 0 0 1px 0;
-  cursor: pointer;
-  font-size: 1.6rem;
-  padding: 1em 0;
   text-align: center;
-  transition: background-color 200ms;
-  &:hover {
-    background: white;
-  }
-
-  @media (max-width: 40em) {
-    padding: 0.5em;
-  }
 `;
 
 export const Button = styled.button`
-  background: none;
+  align-self: flex-end;
+  background: transparent;
   border: none;
-  cursor: pointer;
   display: none;
-  height: 30px;
-  position: relative;
-  text-align: center;
-  z-index: 1000;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
   @media (max-width: 48em) {
     align-items: center;
     display: flex;
+    z-index: 2;
   }
 `;
 
@@ -94,7 +95,7 @@ export const Icon = styled.span`
   &::before,
   &::after {
     content: '';
-    background-color: ${(props) => (props.clicked ? 'black' : 'white')};
+    background-color: white;
     display: inline-block;
     height: 2px;
     left: 0;

@@ -1,16 +1,16 @@
 [
   {
-    "emoji": "./assets/images/large/cmpng/types/tea-bathhome.jpg",
+    "emoji": "/assets/images/large/cmpng/types/tea-bathhome.jpg",
     "title": "Баня + травяной чай",
     "desc": "Баня на дровах с ароматами хвои и трав. После — травяные чаи из местных сборов."
   },
   {
-    "emoji": "./assets/images/large/cmpng/types/fire-camp.jpg",
+    "emoji": "/assets/images/large/cmpng/types/fire-camp.jpg",
     "title": "Джем у костра",
     "desc": "Живая музыка, гитара, перкуссия, тёплое общение у огня под звёздным небом."
   },
   {
-    "emoji": "./assets/images/large/cmpng/types/eco-kitchen.jpg",
+    "emoji": "/assets/images/large/cmpng/types/eco-kitchen.jpg",
     "title": "Эко-питание",
     "desc": "Домашняя еда: вегетарианское меню, уха из свежего улова, блюда из печи."
   }

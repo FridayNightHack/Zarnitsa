@@ -17,7 +17,6 @@ export const Container = styled.div`
 
 export const SecondaryContainer = styled(Container)`
   width: 100%;
-
   @media (max-width: 1024px) {
     width: 80%;
   }

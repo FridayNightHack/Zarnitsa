@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
 import 'styled-components/macro';
 import { HeaderContainer } from '../containers/header';
 import { MobileNavMenuContainer } from '../containers/mobile-nav-menu';
-import { LoadingContainer } from '../containers/loading';
+// import { LoadingContainer } from '../containers/loading';
 import { Content, Hero, CardsContent, Background, Services, Footer } from '../components';
 import data from '../components/astronomyExperince/styles/data.json';
 import services from '../fixtures/services.json';
@@ -15,37 +15,37 @@ import {
   CardTitle,
   Description,
 } from '../components/astronomyExperince/styles/astronomyExpirence';
-import { Display, Justify } from '@styled-icons/bootstrap';
-import { InfoLgDimensions } from '@styled-icons/bootstrap/InfoLg';
+// import { Display, Justify } from '@styled-icons/bootstrap';
+// import { InfoLgDimensions } from '@styled-icons/bootstrap/InfoLg';
 
 const accommodations = [
   {
     title: 'Большой купол «Солнце»',
     emoji: '🌌',
     description: 'Прозрачный купол с видом на звёздное небо и телескопом внутри.',
-    image: './assets/images/large/cmpng/types/night-sky.png',
+    image: '/assets/images/large/cmpng/types/night-sky.png',
   },
   {
     title: 'Юрта «Луна»',
     emoji: '🏕',
     description: 'Место для сна, отдыха и чилл-зона, баня в можжевеловом лесу.',
-    image: './assets/images/large/cmpng/types/bathhouse.jpg',
+    image: '/assets/images/large/cmpng/types/bathhouse.jpg',
   },
   {
     title: 'Лесной домик',
     emoji: '🌲',
     description: 'Уютный деревянный домик среди сосен, тишина и свежий воздух.',
-    image: './assets/images/large/cmpng/types/camp.jpg',
+    image: '/assets/images/large/cmpng/types/camp.jpg',
   },
 ];
 
 export default function Camping() {
-  const [showMobileNav, setShowMobileNav] = useState(false);
-  const [showLoading, setShowLoading] = useState(true);
+  const [showMobileNav, setShowMobileNav] = React.useState(false);
+  // const [showLoading, setShowLoading] = React.useState(true);
 
-  const handleLoad = useCallback(() => {
-    setShowLoading(false);
-  }, []);
+  // const handleLoad = React.useCallback(() => {
+  //   setShowLoading(false);
+  // }, []);
 
   // useEffect(() => {
   //   window.addEventListener('load', handleLoad);
@@ -55,13 +55,12 @@ export default function Camping() {
   // if (showLoading) return <LoadingContainer />;
   return (
     <>
-      <MobileNavMenuContainer showMobileNav={showMobileNav} />
-
       <Background.Centered
-        bg="./assets/images/large/cmpng/domes-2.jpg"
-        bgSmall="./assets/images/large/cmpng/domes-2.jpg"
+        bg={`${process.env.PUBLIC_URL}/assets/images/large/cmpng/domes-2.jpg`}
+        bgSmall={`${process.env.PUBLIC_URL}/assets/images/large/cmpng/domes-2.jpg`}
         style={{ backgroundAttachment: 'fixed' }}>
         <HeaderContainer showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} />
+        <MobileNavMenuContainer showMobileNav={showMobileNav} />
         <Content style={{ padding: '0px 0px' }}>
           <Content.Medium>
             <Hero
@@ -106,7 +105,7 @@ export default function Camping() {
             <CardsContent style={{ paddingTop: '80px' }}>
               {accommodations.map(({ title, emoji, description, image }) => (
                 <CardsContent.Card key={title}>
-                  <CardsContent.Image src={image} />
+                  <CardsContent.Image src={`${process.env.PUBLIC_URL + image}`} />
                   <CardsContent.CardItem>
                     <CardsContent.Title>
                       <CardsContent.Emoji>{emoji}</CardsContent.Emoji>
@@ -147,7 +146,7 @@ export default function Camping() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}>
-                    <Services.Img src={emoji}></Services.Img>
+                    <Services.Img src={`${process.env.PUBLIC_URL + emoji}`}></Services.Img>
                     <Services.ServiceTitle>{title}</Services.ServiceTitle>
                     <Services.Description>{desc}</Services.Description>
                   </Services.ServiceCard>

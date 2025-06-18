@@ -2,9 +2,10 @@ import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import cardData from './fixtures/card-slider.json';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { detectWebP } from './helpers/detectWebP';
+// import { detectWebP } from './helpers/detectWebP';
 import Home from './pages/home';
 import Camping from './pages/camping';
+import SailingTour from './pages/tourism';
 
 function App() {
   const mql = window.matchMedia('(min-width:64em)');
@@ -15,18 +16,17 @@ function App() {
           {cardData.map((data) => (
             <link
               rel="preload"
-              href={`${mql.matches ? data.image : data.background}${
-                detectWebP() ? '.webp' : '.jpg'
-              }`}
+              href={`${process.env.PUBLIC_URL}${mql.matches ? data.image : data.background}`}
               as="image"
-              key={data.image}
+              key={data.background}
             />
           ))}
         </Helmet>
-        <HashRouter basename="/">
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/camping" element={<Camping />} />
+            <Route path="/tourism" element={<SailingTour />} />
           </Routes>
         </HashRouter>
       </HelmetProvider>

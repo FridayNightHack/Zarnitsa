@@ -1,11 +1,11 @@
 import { Header, MobileNavMenu } from '../components';
 import 'styled-components/macro';
-import useMatchMedia from '../hooks/useMatchMedia';
+// import useMatchMedia from '../hooks/useMatchMedia';
 import { Link } from 'react-router-dom';
 
 export function HeaderContainer(props) {
   const { showMobileNav, setShowMobileNav, children } = props;
-  const { isMatched } = useMatchMedia('(max-width:48rem)');
+  // const { isMatched } = useMatchMedia('(max-width:48rem)');
   return (
     <Header>
       <Header.LogoWrapper>
@@ -15,39 +15,29 @@ export function HeaderContainer(props) {
         <Header.Nav>
           <Header.Menu>
             <Header.MenuItem>
-              <Header.Links>
-                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  Карта маршрутов
-                </Link>
-              </Header.Links>
+              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                Карта маршрутов
+              </Link>
             </Header.MenuItem>
             <Header.MenuItem>
-              <Header.Links>
-                <Link to="/camping" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  Кемпинг & Глемпинг
-                </Link>
-              </Header.Links>
+              <Link to="/camping" style={{ textDecoration: 'none', color: 'inherit' }}>
+                Кемпинг & Глемпинг
+              </Link>
             </Header.MenuItem>
             <Header.MenuItem>
-              <Header.Links>
-                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  Парусный туризм
-                </Link>
-              </Header.Links>
+              <Link to="/tourism" style={{ textDecoration: 'none', color: 'inherit' }}>
+                Парусный туризм
+              </Link>
             </Header.MenuItem>
             <Header.MenuItem>
-              <Header.Links>
-                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  Ориентирование
-                </Link>
-              </Header.Links>
+              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                Ориентирование
+              </Link>
             </Header.MenuItem>
             <Header.MenuItem>
-              <Header.Links>
-                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  Школа выживания
-                </Link>
-              </Header.Links>
+              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                Школа выживания
+              </Link>
             </Header.MenuItem>
           </Header.Menu>
         </Header.Nav>

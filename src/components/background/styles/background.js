@@ -1,11 +1,11 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div`
+export const Container = styled.section`
   background: url(${(props) => props.bg}) no-repeat center/cover;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   min-width: 265px;
+  min-height: 100%;
   position: relative;
   z-index: 0;
   transition: background 400ms 100ms;
@@ -27,6 +27,8 @@ export const Container = styled.div`
     background-image: url(${(props) => props.bgSmall});
   }
 `;
+
+export const MainContainer = styled(Container)``;
 
 export const CenteredContainer = styled(Container)`
   background: url(${(props) => props.bg}) no-repeat cover;

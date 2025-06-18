@@ -3,7 +3,7 @@ import {
   Container,
   Wrapper,
   List,
-  Link,
+  StyledLink,
   Text,
   AttributionLink,
   Item,
@@ -28,11 +28,7 @@ MobileNavMenu.Item = function MobileNavMenuItem({ children, ...restProps }) {
 };
 
 MobileNavMenu.Link = function MobileNavMenuLink({ children, ...restProps }) {
-  return (
-    <Link target="_blank" {...restProps}>
-      {children}
-    </Link>
-  );
+  return <StyledLink {...restProps}>{children}</StyledLink>;
 };
 
 MobileNavMenu.Text = function MobileNavMenuText({ children, ...restProps }) {

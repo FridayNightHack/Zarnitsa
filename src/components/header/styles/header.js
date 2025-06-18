@@ -6,7 +6,7 @@ export const Container = styled.header`
   display: flex;
   height: 60px;
   justify-content: space-between;
-  padding: 0 1.5em;
+  padding: 0 1em;
   padding-top: 2em;
   position: relative;
   z-index: 110;
@@ -15,9 +15,7 @@ export const Container = styled.header`
 export const Wrapper = styled.div`
   align-items: center;
   display: flex;
-  @media (max-width: 64em) {
-    width: 100%;
-  }
+
   @media (max-width: 48em) {
     justify-content: flex-end;
   }
@@ -38,7 +36,6 @@ export const Logo = styled.a`
     color: rgba(255, 255, 255, 0.56);
   }
   @media (max-width: 64em) {
-    display: none;
   }
 `;
 
@@ -83,6 +80,11 @@ export const MenuItem = styled.li`
 
   &:hover&::after {
     width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    margin-right: 20px;
+    font-size: 13px;
   }
 `;
 

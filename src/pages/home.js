@@ -58,12 +58,11 @@ export default function Home() {
         />
       </CardSlider.LinearProgress>
 
-      <MobileNavMenuContainer showMobileNav={showMobileNav} />
-
       <Background
-        bg={cardData[currentCardIndex].image}
-        bgSmall={cardData[currentCardIndex].background}>
+        bg={`${process.env.PUBLIC_URL}` + cardData[currentCardIndex].image}
+        bgSmall={`${process.env.PUBLIC_URL}` + cardData[currentCardIndex].background}>
         <HeaderContainer showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} />
+        <MobileNavMenuContainer showMobileNav={showMobileNav} />
         <MainContainer
           currentCardIndex={currentCardIndex}
           setCurrentCardIndex={setCurrentCardIndex}

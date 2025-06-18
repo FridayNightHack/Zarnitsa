@@ -11,25 +11,22 @@ export function MobileNavMenuContainer({ showMobileNav }) {
           css={`
             border-top-width: 1px;
           `}>
-          <MobileNavMenu.Link>Home</MobileNavMenu.Link>
+          <MobileNavMenu.Link to="/">Карта маршрутов</MobileNavMenu.Link>
         </MobileNavMenu.Item>
         <MobileNavMenu.Item>
-          <MobileNavMenu.Link>Holidays</MobileNavMenu.Link>
+          <MobileNavMenu.Link to="/camping">Кемпинг & Глемпинг</MobileNavMenu.Link>
         </MobileNavMenu.Item>
         <MobileNavMenu.Item>
-          <MobileNavMenu.Link>Destinations</MobileNavMenu.Link>
+          <MobileNavMenu.Link to="/tourism">Парусный туризм</MobileNavMenu.Link>
         </MobileNavMenu.Item>
         <MobileNavMenu.Item>
-          <MobileNavMenu.Link>Flights</MobileNavMenu.Link>
+          <MobileNavMenu.Link to="/">Ориентирование</MobileNavMenu.Link>
         </MobileNavMenu.Item>
         <MobileNavMenu.Item>
-          <MobileNavMenu.Link>Offers</MobileNavMenu.Link>
-        </MobileNavMenu.Item>
-        <MobileNavMenu.Item>
-          <MobileNavMenu.Link>Contacts</MobileNavMenu.Link>
+          <MobileNavMenu.Link to="/">Школа выживания</MobileNavMenu.Link>
         </MobileNavMenu.Item>
       </MobileNavMenu.List>
-
+      {/* 
       <MobileNavMenu.Wrapper>
         <MobileNavMenu.List
           css={`
@@ -65,8 +62,8 @@ export function MobileNavMenuContainer({ showMobileNav }) {
             </MobileNavMenu.Link>
           </MobileNavMenu.Item>
         </MobileNavMenu.List>
-      </MobileNavMenu.Wrapper>
-
+      </MobileNavMenu.Wrapper> */}
+      {/* 
       <MobileNavMenu.Wrapper>
         <MobileNavMenu.Text>
           &#169; 2021 Coded by Bilkan Konus, inspired by{' '}
@@ -75,7 +72,7 @@ export function MobileNavMenuContainer({ showMobileNav }) {
           </MobileNavMenu.AttributionLink>
           .
         </MobileNavMenu.Text>
-      </MobileNavMenu.Wrapper>
+      </MobileNavMenu.Wrapper> */}
     </MobileNavMenu>
   );
 }

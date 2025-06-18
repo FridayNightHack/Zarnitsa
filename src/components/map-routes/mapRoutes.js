@@ -1,39 +1,46 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Polyline, Popup } from 'react-leaflet';
 import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import { MapWrapper, StyledMap, StyledPopup } from './styles/mapRoutes';
 
-// Настройка иконки Leaflet
+// Обязательно: подгружаем иконки вручную из Leaflet (иначе они не появятся)
+import 'leaflet/dist/leaflet.css';
+
+// Fix: Leaflet marker icons not showing
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
 });
 
-const MapRoutes = () => {
-  return (
-    <MapWrapper>
-      <StyledMap center={[44.6, 33.5]} zoom={8} scrollWheelZoom={false}>
-        <TileLayer
-          attribution="&copy; OpenStreetMap contributors"
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-
-        {/* Пример метки */}
-        <Marker position={[44.6167, 33.525]}>
-          <Popup>
-            <StyledPopup>
-              <h3>Якорная стоянка</h3>
-              <p>Рядом с Геленджиком. Отличное место для ночёвки на яхте.</p>
-              <button>Забронировать</button>
-            </StyledPopup>
-          </Popup>
-        </Marker>
-      </StyledMap>
-    </MapWrapper>
-  );
+const positions = {
+  gelendzhik: [44.5638, 38.0742], // Бухта Геленджика
+  tarkhankut: [45.3395, 32.525], // Мыс Тарханкут
 };
 
-export default MapRoutes;
+const route = [positions.gelendzhik, positions.tarkhankut];
+
+export default function MapRoute() {
+  return (
+    <MapContainer
+      center={[44.9, 35.0]} // Центр между двумя точками
+      zoom={6}
+      style={{ height: '500px', width: '100%' }}>
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
+      />
+
+      {/* Маркеры */}
+      <Marker position={positions.gelendzhik}>
+        <Popup>Бухта Геленджика — ночёвка под звёздами</Popup>
+      </Marker>
+
+      <Marker position={positions.tarkhankut}>
+        <Popup>Мыс Тарханкут — экстремальное маневрирование</Popup>
+      </Marker>
+
+      {/* Линия маршрута */}
+      <Polyline positions={route} color="blue" />
+    </MapContainer>
+  );
+}

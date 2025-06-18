@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import 'styled-components/macro';
 import { Content, CardSlider, Hero } from '../components';
-import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark';
+// import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark';
 import { ChevronLeft, ChevronRight } from '@styled-icons/bootstrap/';
 import cardData from '../fixtures/card-slider.json';
-import { detectWebP } from '../helpers/detectWebP';
+// import { detectWebP } from '../helpers/detectWebP';
 
 export function ContentContainer(props) {
   const {
@@ -146,7 +146,7 @@ export function ContentContainer(props) {
             {cardData.slice(1).map((data, i) => (
               <CardSlider.Card
                 first={i === 0}
-                background={data.background}
+                background={`${process.env.PUBLIC_URL}` + data.background}
                 key={data.id}
                 css={`
                   box-shadow: ${currentCardIndex >= 1 && i + 1 === currentCardIndex
